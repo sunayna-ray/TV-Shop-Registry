@@ -85,6 +85,8 @@ $query=$_POST["query"];
 $result=mysql_query($query);
 if ($result){
 echo '<h2>Your query has been executed.</h2>';
+}else if($query!=""){
+	echo '<h2>Incorrect query.</h2>';	
 }
 mysql_close($dbcon);
 ?>
